@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add HSR Character</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Add a New Character</h1>
+    <form action="/add" method="POST">
+        <label>Name:</label>
+        <input type="text" name="name" required><br><br>
+        
+        <label>Element:</label>
+        <input type="text" name="type" required><br><br>
+        
+        <label>Path:</label>
+        <input type="text" name="path" required><br><br>
+        
+        <button type="submit">Add Character</button>
+    </form>
+    <br>
+    <a href="/"><button>Back to List</button></a>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</body>
+</html>
